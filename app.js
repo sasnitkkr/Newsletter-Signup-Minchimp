@@ -40,7 +40,7 @@ app.post("/", (req, res)=>{
 
     const options = {
         method: "POST",
-        auth: "sahil:e0efa9bb853ccb46bbf4f946beb9205c-us"
+        auth: "sahil:e0efa9bb853ccb46bbf4f946beb9205c-us6"
     }
 
     const request = https.request(url, options, (response) => {
@@ -65,7 +65,7 @@ app.post("/failure", (req, res)=>{
     res.redirect("/"); 
 })
 
-app.listen(PORT, ()=>{
+app.listen(process.env.PORT || PORT, ()=>{
     console.log("app started at port " + PORT);
 })
 
